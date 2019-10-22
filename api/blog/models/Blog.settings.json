@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "blogs",
+  "info": {
+    "name": "blog",
+    "description": "estos son los artículos de wulpers studio "
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "titulo": {
+      "required": true,
+      "type": "string"
+    },
+    "descripcion": {
+      "required": true,
+      "type": "text"
+    },
+    "imagendestacada": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "url": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "blog": {
+      "required": true,
+      "unique": true,
+      "type": "text"
+    }
+  }
+}
